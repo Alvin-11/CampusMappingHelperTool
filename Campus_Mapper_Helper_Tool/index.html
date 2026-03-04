@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Indoor Positioning Map</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <style>
+    body { margin: 0; font-family: sans-serif; }
+    #map { height: 90vh; }
+    #controls {
+      height: 10vh; min-height: 48px;
+      display: flex; justify-content: center; align-items: center;
+      gap: 10px; background: #f4f4f4; flex-wrap: wrap; padding: 4px 10px;
+    }
+    button {
+      padding: 7px 14px; font-size: 13px; cursor: pointer;
+      border-radius: 4px; border: 1px solid #aaa; background: #fff;
+    }
+    button.active { background: #4CAF50; color: white; border-color: #2e7d32; }
+    select {
+      padding: 6px 10px; font-size: 13px; border-radius: 4px;
+      border: 1px solid #aaa; cursor: pointer; background: #fff;
+    }
+    label { font-size: 13px; display: flex; align-items: center; gap: 5px; }
+
+    #floorCanvas { position: absolute; top: 0; left: 0; pointer-events: none; }
+    .corner-handle {
+      position: fixed; width: 16px; height: 16px; background: yellow;
+      border: 2px solid black; border-radius: 50%; cursor: grab; z-index: 800;
+      transform: translate(-50%,-50%); display: none;
+    }
+    .corner-handle:active { cursor: grabbing; }
+    #statusBar {
+      display: none; position: fixed; bottom: 12vh; left: 50%;
+      transform: translateX(-50%); background: rgba(0,0,0,0.75); color:#fff;
+      padding: 8px 18px; border-radius: 6px; font-size: 14px; z-index: 900; pointer-events: none;
+    }
+    #loadStatus {
+      position: fixed; top: 10px; left: 50%; transform: translateX(-50%);
+      background: rgba(0,0,0,0.8); color: #fff; padding: 9px 20px;
+      border-radius: 8px; font-size: 13px; z-index: 1000; pointer-events: none;
+      max-width: 80vw; text-align: center; transition: opacity 0.5s;
+    }
+    .room-label {
+      background: transparent !important; border: none !important;
+      box-shadow: none !important; color: #fff; font-size: 7.5px; font-weight: bold;
+      text-shadow: 0 0 3px #000, 0 0 3px #000; white-space: nowrap; pointer-events: none;
+    }
+    .leaflet-tooltip-left::before, .leaflet-tooltip-right::before { display: none; }
+    #legend {
+      position: fixed; bottom: 14vh; right: 10px;
+      background: rgba(255,255,255,0.93); border: 1px solid #ccc;
+      border-radius: 6px; padding: 8px 12px; font-size: 11px; z-index: 950; line-height: 1.9;
+    }
+    .leg-dot {
+      display: inline-block; width: 11px; height: 11px;
+      margin-right: 5px; border-radius: 2px; vertical-align: middle;
+    }
+    #fileStatus {
+      position: fixed; top: 50px; right: 10px;
+      background: rgba(255,255,255,0.95); border: 1px solid #ccc;
+      border-radius: 6px; padding: 8px 12px; font-size: 11px;
+      z-index: 950; max-width: 220px; line-height: 1.7;
+    }
+    .file-ok  { color: #2e7d32; }
+    .file-err { color: #c62828; }
+    /* Overlay Background */
+.premium-overlay {
+  display:none,
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Card */
+.premium-card {
+  background: white;
+  width: 420px;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  animation: slideUp 0.4s ease;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Badge */
+.premium-badge {
+  background: linear-gradient(90deg, #6366f1, #9333ea);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* Heading */
+.premium-card h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+
+/* Description */
+.premium-description {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* Pricing */
+.pricing-box {
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.per-month {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* Features */
+.feature-list {
+  text-align: left;
+  font-size: 14px;
+  margin: 20px 0;
+  padding-left: 0;
+  list-style: none;
+  color: #374151;
+}
+
+.feature-list li {
+  margin-bottom: 8px;
+}
+
+/* Button */
+.subscribe-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #6366f1, #9333ea);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subscribe-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(99,102,241,0.4);
+}
+
+/* Fake note */
+.fake-note {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 15px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+  </style>
+</head>
+<body>
+<!-- Premium Subscription Modal -->
+ <!--
+<div id="premiumModal" class="premium-overlay">
+  <div class="premium-card">
+    
+    <div class="premium-badge">PREMIUM ACCESS</div>
+    
+    <h1>Unlock Premium Indoor Navigation</h1>
+    
+    <p class="premium-description">
+      Get unlimited access to all indoor maps, real-time positioning,
+      advanced building layers, and exclusive smart navigation features.
+    </p>
+
+    <div class="pricing-box">
+      <span class="price">$50</span>
+      <span class="per-month">/ month</span>
+    </div>
+
+    <ul class="feature-list">
+      <li>✔ Full building access</li>
+      <li>✔ Advanced zoom & layers</li>
+      <li>✔ Real-time indoor positioning</li>
+      <li>✔ Priority feature updates</li>
+    </ul>
+
+    <button id="subscribeButton" class="subscribe-btn">
+      Subscribe Now
+    </button>
+
+    <p class="fake-note">*Charges will be applied to your credit card.</p>
+
+  </div>
+</div>
+-->
+<div id="map"></div>
+<div id="statusBar"></div>
+<div id="loadStatus">⏳ Scanning for SQL files…</div>
+<div id="fileStatus"></div>
+
+<div id="controls">
+  <label>Building:
+    <select id="buildingSelector" onchange="onBuildingChange(this.value)">
+      <option value="all">All Buildings</option>
+    </select>
+  </label>
+  <label>Floor:
+    <select id="floorSelector" onchange="onFloorChange(this.value)">
+      <option value="all">All Floors</option>
+    </select>
+  </label>
+  <button id="btnMoveImage" onclick="toggleMoveImage()">Move Image</button>
+  <button id="btnMoveMap"   onclick="toggleMoveMap()">Move Map</button>
+  <button id="btnWarpImage" onclick="toggleWarpMode()">Warp/Rotate Image</button>
+  <button id="btnNodeMode"    onclick="toggleNodeMode()">Add Nodes</button>
+  <button id="btnEdgeMode"    onclick="toggleEdgeMode()">Connect Nodes</button>
+  <button id="btnFloorLines"  onclick="toggleFloorLines()" class="active">Floor Outlines</button>
+  <button onclick="downloadGeoJSON()">Download GeoJSON</button>
+  <button onclick="zoomToLoyola()">Zoom to Loyola</button>
+  <button onclick="zoomToSGW()">Zoom to SGW</button>
+</div>
+
+<div class="corner-handle" id="handle0"></div>
+<div class="corner-handle" id="handle1"></div>
+<div class="corner-handle" id="handle2"></div>
+<div class="corner-handle" id="handle3"></div>
+
+<div id="legend">
+  <b>Legend</b><br>
+  <span class="leg-dot" style="background:#4a90d9"></span>Room<br>
+  <span class="leg-dot" style="background:#e67e22"></span>Auditorium<br>
+  <span class="leg-dot" style="background:#1abc9c"></span>Toilets<br>
+  <span class="leg-dot" style="background:#9b59b6"></span>Elevator<br>
+  <span class="leg-dot" style="background:#f39c12"></span>Stairs<br>
+  <span class="leg-dot" style="background:#95a5a6"></span>Conveying<br>
+  <span class="leg-dot" style="background:#e74c3c"></span>Eating Area<br>
+  <span class="leg-dot" style="background:#2ecc71"></span>Vending<br>
+  <span class="leg-dot" style="background:#f1c40f"></span>Printer<br>
+  <span style="display:inline-block;width:24px;border-top:2.5px dashed #ff6600;margin-right:4px;vertical-align:middle"></span>Floor Outline
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+
+ function reverseMapping() {
+  const geojsonFiles = ["LB4.geojson"];
+
+  geojsonFiles.forEach(file => {
+    fetch(file)
+      .then(res => res.json())
+      .then(data => {
+
+        // First pass: draw edges
+        L.geoJSON(data, {
+          filter: f => f.properties.type === "edge",
+          style: { color: "blue", weight: 4 }
+        }).addTo(map);
+
+        // Second pass: register nodes into placedNodes so edge mode works
+        data.features.forEach(feat => {
+          if (feat.properties.type !== "node") return;
+
+          const [lng, lat] = feat.geometry.coordinates;
+          const latlng = L.latLng(lat, lng);
+
+          const marker = L.marker(latlng).addTo(map);
+          marker.bindPopup(`<b>${feat.properties.name}</b>`);
+
+          // Add to geojsonData so it's included in future downloads
+          geojsonData.features.push(feat);
+
+          const nodeEntry = { feat, marker, latlng };
+          placedNodes.push(nodeEntry);
+
+          // Wire up edge-mode click handler — same as manually placed nodes
+          marker.on('click', leafletEvent => {
+            onNodeMarkerClick(nodeEntry, leafletEvent);
+          });
+        });
+
+        // Also re-register any edges from the file into geojsonData
+        data.features.forEach(feat => {
+          if (feat.properties.type === "edge") {
+            geojsonData.features.push(feat);
+          }
+        });
+
+      })
+      .catch(err => console.warn(`Failed to load ${file}:`, err));
+  });
+}
+  reverseMapping();
+  // Starting logic for subscription model
+ /* const modal = document.getElementById("premiumModal");
+  const button = document.getElementById("subscribeButton");
+
+  document.body.style.overflow = "hidden";
+
+  button.addEventListener("click", function () {
+    modal.style.opacity = "0";
+    modal.style.transition = "opacity 0.3s ease";
+
+    setTimeout(() => {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }, 300);
+  });*/
+    window.onload = function () {
+    document.getElementById("premiumModal").style.display = "none";
+  };
+  // Ending logic for subscription model
+// ═══════════════════════════════════════════════
+// COLORS
+// ═══════════════════════════════════════════════
+const TYPE_COLORS = {
+  room:            { fill:'#4a90d9', stroke:'#2255aa' },
+  auditorium:      { fill:'#e67e22', stroke:'#a04500' },
+  conveying:       { fill:'#95a5a6', stroke:'#5d6d7e' },
+  elevator:        { fill:'#9b59b6', stroke:'#6c3483' },
+  stairs:          { fill:'#f39c12', stroke:'#b7770d' },
+  toilets:         { fill:'#1abc9c', stroke:'#0e8a6e' },
+  eating_area:     { fill:'#e74c3c', stroke:'#a93226' },
+  vending_machine: { fill:'#2ecc71', stroke:'#1a7a42' },
+  printer:         { fill:'#f1c40f', stroke:'#9a7d0a' },
+};
+
+// ═══════════════════════════════════════════════
+// SQL PARSER
+// ═══════════════════════════════════════════════
+function parseSQLFile(sql) {
+  const rooms = [];
+  const insertRegex = /INSERT INTO\s+(\w+)\s*\([^)]+\)\s*VALUES\s*([\s\S]+?);/gi;
+  let m;
+  while ((m = insertRegex.exec(sql)) !== null) {
+    const table = m[1].toLowerCase();
+    if (!table.includes('room') || table.includes('building')) continue;
+    const rows = splitValueRows(m[2]);
+    for (const row of rows) {
+      try {
+        const parsed = parseRoomRow(row);
+        if (parsed) rooms.push(parsed);
+      } catch(e) { }
+    }
+  }
+  return rooms;
+}
+
+function splitValueRows(block) {
+  const rows = []; let depth = 0, start = -1;
+  for (let i = 0; i < block.length; i++) {
+    const ch = block[i];
+    if      (ch === '(' && depth === 0) { depth = 1; start = i; }
+    else if (ch === '(')                { depth++; }
+    else if (ch === ')') {
+      depth--;
+      if (depth === 0 && start !== -1) { rows.push(block.slice(start + 1, i)); start = -1; }
+    }
+  }
+  return rows;
+}
+
+function parseRoomRow(rowContent) {
+  const fields = splitFields(rowContent);
+  if (fields.length < 6) return null;
+
+  const id       = unquote(fields[0].trim());
+  const building = unquote(fields[1].trim());
+  const floor    = unquote(fields[2].trim());
+  const label    = unquote(fields[3].trim());
+  const type     = unquote(fields[4].trim());
+  const geomRaw  = fields[5].trim();
+
+  const jsonStr = geomRaw
+    .replace(/::jsonb\s*$/i, '')
+    .replace(/^'|'$/g, '')
+    .trim();
+
+  const cleanJson = jsonStr.replace(/\s*ON\s+CONFLICT[\s\S]*/i, '').trim();
+  let geom;
+  try { geom = JSON.parse(cleanJson); } catch (e) { return null; }
+  const geomType = geom?.type || geom?.['type'];
+  if (!geom || geomType !== 'Polygon' || !geom.coordinates?.[0]) return null;
+
+  const ring = geom.coordinates[0];
+  const coords = (
+    ring[0][0] === ring[ring.length - 1][0] &&
+    ring[0][1] === ring[ring.length - 1][1]
+  ) ? ring.slice(0, -1) : ring;
+
+  return { id, building, floor, label, type, coords };
+}
+
+function splitFields(str) {
+  const fields = []; let depth = 0, inStr = false, cur = '';
+  for (let i = 0; i < str.length; i++) {
+    const ch = str[i];
+    if      (ch === "'" && !inStr) { inStr = true; cur += ch; }
+    else if (ch === "'" &&  inStr) {
+      if (str[i + 1] === "'") { cur += ch; i++; cur += str[i]; }
+      else { inStr = false; cur += ch; }
+    }
+    else if (!inStr && (ch === '{' || ch === '[' || ch === '(')) { depth++; cur += ch; }
+    else if (!inStr && (ch === '}' || ch === ']' || ch === ')')) { depth--; cur += ch; }
+    else if (ch === ',' && depth === 0 && !inStr) { fields.push(cur); cur = ''; }
+    else { cur += ch; }
+  }
+  if (cur.trim()) fields.push(cur);
+  return fields;
+}
+
+function unquote(s) { return s.replace(/^'|'$/g, '').replace(/''/g, "'"); }
+
+
+// ═══════════════════════════════════════════════
+// FLOOR OUTLINE PARSER
+// ═══════════════════════════════════════════════
+function parseFloorOutlines(sql) {
+  const floors = [];
+
+  const updateRegex = /UPDATE\s+building_floor\s+SET\s+([\s\S]+?)WHERE\s+building_code\s*=\s*'([^']+)'\s+AND\s+id\s*=\s*'([^']+)'\s*;/gi;
+  let m;
+  while ((m = updateRegex.exec(sql)) !== null) {
+    const setClause   = m[1];
+    const buildingCode = m[2];
+    const floorId      = m[3];
+
+    const geomMatch = setClause.match(/plan_geometry\s*=\s*'([\s\S]+?)'(?:::\w+)?(?:\s*,|\s*$)/i);
+    if (!geomMatch) continue;
+
+    const labelMatch = setClause.match(/label\s*=\s*'([^']+)'/i);
+    const label = labelMatch ? labelMatch[1] : floorId;
+
+    const entry = extractFloorEntry(geomMatch[1], buildingCode, floorId, label);
+    if (entry) floors.push(entry);
+  }
+
+  const insertRegex = /INSERT INTO\s+building_floor\s*\([^)]+\)\s*VALUES\s*([\s\S]+?);/gi;
+  while ((m = insertRegex.exec(sql)) !== null) {
+    const rows = splitValueRows(m[1]);
+    for (const row of rows) {
+      try {
+        const fields = splitFields(row);
+        if (fields.length < 5) continue;
+        const floorId      = unquote(fields[0].trim());
+        const buildingCode = unquote(fields[1].trim());
+        const label        = unquote(fields[2].trim());
+        const geomRaw = fields[4].trim()
+          .replace(/::jsonb\s*$/i, '')
+          .replace(/^'|'$/g, '')
+          .trim();
+        const entry = extractFloorEntry(geomRaw, buildingCode, floorId, label);
+        if (entry) floors.push(entry);
+      } catch(e) { }
+    }
+  }
+
+  return floors;
+}
+
+function extractFloorEntry(jsonStr, buildingCode, floorId, label) {
+  let geom;
+  try { geom = JSON.parse(jsonStr); } catch(e) { return null; }
+  if (!geom) return null;
+
+  let rings = [];
+
+  if (geom.type === 'Polygon') {
+    rings = geom.coordinates;
+  } else if (geom.type === 'MultiPolygon') {
+    geom.coordinates.forEach(poly => { if (poly[0]) rings.push(poly[0]); });
+  } else {
+    return null;
+  }
+
+  if (rings.length === 0) return null;
+  return { buildingCode, floorId, label, rings };
+}
+
+
+// ═══════════════════════════════════════════════
+// FLOOR OUTLINE LAYER MANAGEMENT
+// ═══════════════════════════════════════════════
+let floorOutlineLayers = [];
+let showFloorLines = true;
+
+function drawFloorOutline(entry) {
+  entry.rings.forEach(ring => {
+    const latlngs = ring.map(c => [c[1], c[0]]);
+    if (latlngs.length > 0) {
+      const first = latlngs[0], last = latlngs[latlngs.length - 1];
+      if (first[0] !== last[0] || first[1] !== last[1]) latlngs.push(first);
+    }
+
+    const polyline = L.polyline(latlngs, {
+      color: '#ff6600',
+      weight: 2.5,
+      opacity: 0.85,
+      dashArray: '6,4',
+    }).addTo(map);
+
+    polyline.bindPopup(
+      `<div style="font-size:13px;line-height:1.8">` +
+      `<b>Floor Outline</b><br>` +
+      `🏢 Building: <b>${entry.buildingCode}</b><br>` +
+      `🏗️ Floor: <b>${entry.label}</b>` +
+      `</div>`
+    );
+
+    floorOutlineLayers.push({
+      building: entry.buildingCode,
+      floor: entry.floorId,
+      polyline
+    });
+  });
+}
+
+function applyFloorOutlineFilter() {
+  floorOutlineLayers.forEach(({ building, floor, polyline }) => {
+    const bMatch = activeBuilding === 'all' || building === activeBuilding;
+    const fMatch = activeFloor    === 'all' || floor    === activeFloor;
+    const show   = showFloorLines && bMatch && fMatch;
+    if (show  && !map.hasLayer(polyline)) map.addLayer(polyline);
+    if (!show &&  map.hasLayer(polyline)) map.removeLayer(polyline);
+  });
+}
+
+function toggleFloorLines() {
+  showFloorLines = !showFloorLines;
+  document.getElementById('btnFloorLines').classList.toggle('active', showFloorLines);
+  applyFloorOutlineFilter();
+}
+
+// ═══════════════════════════════════════════════
+// MAP INIT
+// ═══════════════════════════════════════════════
+const map = L.map('map', {
+  dragging: false, scrollWheelZoom: false,
+  doubleClickZoom: false, touchZoom: false, zoomControl: true
+}).setView([45.495, -73.579], 18);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors', maxZoom: 22
+}).addTo(map);
+
+
+// ═══════════════════════════════════════════════
+// ROOM LAYER MANAGEMENT
+// ═══════════════════════════════════════════════
+let roomLayers = [];
+let allRooms   = [];
+let activeBuilding = 'all';
+let activeFloor    = 'all';
+
+const buildingFloors = {};
+
+function registerRoom(room) {
+  if (!buildingFloors[room.building]) buildingFloors[room.building] = new Set();
+  buildingFloors[room.building].add(room.floor);
+}
+
+function drawRoom(room) {
+  const colors = TYPE_COLORS[room.type] || { fill: '#888', stroke: '#444' };
+  const latlngs = room.coords.map(c => [c[1], c[0]]);
+
+  const polygon = L.polygon(latlngs, {
+    color: colors.stroke, fillColor: colors.fill,
+    fillOpacity: 0.55, weight: 1.5, opacity: 0.9
+  }).addTo(map);
+
+  polygon.bindTooltip(room.label, {
+    permanent: true, direction: 'center', className: 'room-label'
+  });
+
+  polygon.bindPopup(
+    `<div style="font-size:13px;line-height:1.9">` +
+    `<b style="font-size:15px">${room.label}</b><br>` +
+    `🏢 <b>${room.building}</b> &nbsp;·&nbsp; Floor <b>${room.floor}</b><br>` +
+    `🏷️ ${room.type}<br>` +
+    `<span style="color:#888;font-size:11px">${room.id}</span>` +
+    `</div>`
+  );
+
+  roomLayers.push({ building: room.building, floor: room.floor, polygon });
+}
+
+function applyFilter() {
+  roomLayers.forEach(({ building, floor, polygon }) => {
+    const bMatch = activeBuilding === 'all' || building === activeBuilding;
+    const fMatch = activeFloor    === 'all' || floor    === activeFloor;
+    const show = bMatch && fMatch;
+    if (show  && !map.hasLayer(polygon)) map.addLayer(polygon);
+    if (!show &&  map.hasLayer(polygon)) map.removeLayer(polygon);
+  });
+  applyFloorOutlineFilter();
+}
+
+function onBuildingChange(val) {
+  activeBuilding = val;
+  activeFloor    = 'all';
+  rebuildFloorDropdown(val);
+  applyFilter();
+}
+
+function onFloorChange(val) {
+  activeFloor = val;
+  applyFilter();
+}
+
+function rebuildFloorDropdown(building) {
+  const sel = document.getElementById('floorSelector');
+  sel.innerHTML = '<option value="all">All Floors</option>';
+
+  let floors;
+  if (building === 'all') {
+    const allFloors = new Set();
+    Object.values(buildingFloors).forEach(s => s.forEach(f => allFloors.add(f)));
+    floors = [...allFloors];
+  } else {
+    floors = buildingFloors[building] ? [...buildingFloors[building]] : [];
+  }
+
+  floors.sort((a, b) => {
+    const na = parseFloat(a), nb = parseFloat(b);
+    return isNaN(na) || isNaN(nb) ? a.localeCompare(b) : na - nb;
+  });
+
+  floors.forEach(f => {
+    const opt = document.createElement('option');
+    opt.value = f;
+    opt.textContent = `Floor ${f}`;
+    sel.appendChild(opt);
+  });
+
+  sel.value = 'all';
+}
+
+function finalizeDropdowns() {
+  const buildingSel = document.getElementById('buildingSelector');
+  buildingSel.innerHTML = '<option value="all">All Buildings</option>';
+
+  const buildings = Object.keys(buildingFloors).sort();
+  buildings.forEach(b => {
+    const opt = document.createElement('option');
+    opt.value = b; opt.textContent = b;
+    buildingSel.appendChild(opt);
+  });
+
+  rebuildFloorDropdown('all');
+}
+
+function fitMapToRooms() {
+  const layers = [
+    ...roomLayers.map(r => r.polygon),
+    ...floorOutlineLayers.map(f => f.polyline)
+  ];
+  if (layers.length === 0) return;
+  const group = L.featureGroup(layers);
+  map.fitBounds(group.getBounds().pad(0.05));
+}
+
+
+// ═══════════════════════════════════════════════
+// MULTI-FILE LOADER
+// ═══════════════════════════════════════════════
+const SQL_FILES = [
+  'loyola1.sql', 'loyola2.sql', 'sgwH.sql', 'sgwMb.sql',
+  'rooms.sql', 'rooms_h.sql', 'rooms_cc.sql',
+  'rooms_vl.sql', 'rooms_ve.sql', 'rooms_ev.sql',
+  'rooms_mb.sql', 'data.sql', 'hall.sql',
+  'building.sql', 'buildings.sql', 'map.sql',
+  'floors.sql', 'building_floors.sql', 'outlines.sql',
+];
+
+async function tryFetchSQL(filename) {
+  try {
+    const res = await fetch(filename);
+    if (!res.ok) return null;
+    const text = await res.text();
+    const hasRooms   = /INSERT\s+INTO\s+\w*room\w*/i.test(text);
+    const hasFloors  = /UPDATE\s+building_floor/i.test(text) || /INSERT\s+INTO\s+building_floor/i.test(text);
+    if (!hasRooms && !hasFloors) return null;
+    return text;
+  } catch (e) {
+    return null;
+  }
+}
+
+async function loadAllSQL() {
+  const loadStatusEl = document.getElementById('loadStatus');
+  const fileStatusEl = document.getElementById('fileStatus');
+
+  loadStatusEl.textContent = '⏳ Loading SQL files…';
+
+  const results = [];
+  const errors  = [];
+
+  const fetches = await Promise.all(
+    SQL_FILES.map(async f => ({ filename: f, sql: await tryFetchSQL(f) }))
+  );
+
+  for (const { filename, sql } of fetches) {
+    if (!sql) { errors.push({ filename, reason: 'not found' }); continue; }
+
+    const rooms    = parseSQLFile(sql);
+    const outlines = parseFloorOutlines(sql);
+
+    if (rooms.length === 0 && outlines.length === 0) {
+      errors.push({ filename, reason: 'no rooms or floor outlines parsed' });
+      continue;
+    }
+
+    rooms.forEach(room => {
+      allRooms.push(room);
+      registerRoom(room);
+      drawRoom(room);
+    });
+
+    outlines.forEach(entry => {
+      if (!buildingFloors[entry.buildingCode]) buildingFloors[entry.buildingCode] = new Set();
+      buildingFloors[entry.buildingCode].add(entry.floorId);
+      drawFloorOutline(entry);
+    });
+
+    const parts = [];
+    if (rooms.length   > 0) parts.push(`${rooms.length} rooms`);
+    if (outlines.length > 0) parts.push(`${outlines.length} floor outlines`);
+    results.push({ filename, summary: parts.join(', ') });
+  }
+
+  let html = '<b>Files</b><br>';
+  results.forEach(r => {
+    html += `<span class="file-ok">✅ ${r.filename} (${r.summary})</span><br>`;
+  });
+  errors.filter(e => e.reason !== 'not found').forEach(e => {
+    html += `<span class="file-err">⚠️ ${e.filename}: ${e.reason}</span><br>`;
+  });
+  if (results.length === 0) {
+    html += `<span class="file-err">No SQL files found.<br>Place .sql files next to this HTML and reload.</span>`;
+  }
+  fileStatusEl.innerHTML = html;
+
+  if (allRooms.length > 0 || floorOutlineLayers.length > 0) {
+    const fileWord = results.length === 1 ? 'file' : 'files';
+    const buildingList = Object.keys(buildingFloors).sort().join(', ');
+    loadStatusEl.textContent =
+      `✅ ${allRooms.length} rooms · ${floorOutlineLayers.length} floor outlines from ${results.length} ${fileWord} — Buildings: ${buildingList}`;
+    setTimeout(() => {
+      loadStatusEl.style.opacity = '0';
+      setTimeout(() => loadStatusEl.remove(), 600);
+    }, 4000);
+
+    finalizeDropdowns();
+    fitMapToRooms();
+  } else {
+    loadStatusEl.style.background = 'rgba(180,30,30,0.9)';
+    loadStatusEl.textContent =
+      '❌ No data loaded. Place .sql files next to map.html and reload.';
+  }
+}
+
+loadAllSQL();
+
+
+// ═══════════════════════════════════════════════
+// FLOOR PLAN IMAGE (canvas warp overlay)
+// ═══════════════════════════════════════════════
+let geoCorners = [
+  L.latLng(45.4976, -73.5795), L.latLng(45.4976, -73.5778),
+  L.latLng(45.4962, -73.5795), L.latLng(45.4962, -73.5778)
+];
+
+map.createPane('floorPane');
+map.getPane('floorPane').style.zIndex = 250;
+map.getPane('floorPane').style.pointerEvents = 'none';
+
+const canvas = document.createElement('canvas');
+canvas.id = 'floorCanvas';
+map.getPane('floorPane').appendChild(canvas);
+const ctx = canvas.getContext('2d');
+const mapEl = document.getElementById('map');
+
+function resizeCanvas() {
+  canvas.width = mapEl.offsetWidth; canvas.height = mapEl.offsetHeight;
+  canvas.style.left = '0'; canvas.style.top = '0';
+}
+
+const img = new Image();
+img.src = 'Hall-2.png';
+img.onload = redraw;
+
+map.on('move zoom viewreset moveend zoomend resize', () => { resizeCanvas(); redraw(); });
+window.addEventListener('resize', () => { resizeCanvas(); redraw(); });
+resizeCanvas();
+
+function redraw() {
+  if (!img.complete || img.naturalWidth === 0) return;
+  const pp = map._getMapPanePos();
+  canvas.style.transform = `translate(${-pp.x}px,${-pp.y}px)`;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const sc = geoCorners.map(ll => { const p = map.latLngToContainerPoint(ll); return [p.x, p.y]; });
+  const iw = img.naturalWidth, ih = img.naturalHeight;
+  ctx.globalAlpha = 0.75;
+  drawAffine([0,0],[iw,0],[iw,ih], sc[0],sc[1],sc[3]);
+  drawAffine([0,0],[iw,ih],[0,ih], sc[0],sc[3],sc[2]);
+  ctx.globalAlpha = 1;
+  if (warpMode) syncHandles();
+}
+
+function drawAffine(s0,s1,s2,d0,d1,d2) {
+  ctx.save();
+  ctx.beginPath(); ctx.moveTo(d0[0],d0[1]); ctx.lineTo(d1[0],d1[1]); ctx.lineTo(d2[0],d2[1]);
+  ctx.closePath(); ctx.clip();
+  const dn = (s1[0]-s0[0])*(s2[1]-s0[1])-(s2[0]-s0[0])*(s1[1]-s0[1]);
+  if (Math.abs(dn)<1e-10){ctx.restore();return;}
+  const a=((d1[0]-d0[0])*(s2[1]-s0[1])-(d2[0]-d0[0])*(s1[1]-s0[1]))/dn;
+  const b=((d1[1]-d0[1])*(s2[1]-s0[1])-(d2[1]-d0[1])*(s1[1]-s0[1]))/dn;
+  const c=((d2[0]-d0[0])*(s1[0]-s0[0])-(d1[0]-d0[0])*(s2[0]-s0[0]))/dn;
+  const d=((d2[1]-d0[1])*(s1[0]-s0[0])-(d1[1]-d0[1])*(s2[0]-s0[0]))/dn;
+  ctx.transform(a,b,c,d,d0[0]-a*s0[0]-c*s0[1],d0[1]-b*s0[0]-d*s0[1]);
+  ctx.drawImage(img,0,0); ctx.restore();
+}
+
+// ── Warp handles ──
+function syncHandles() {
+  geoCorners.forEach((ll,i) => {
+    const p = map.latLngToContainerPoint(ll);
+    const h = document.getElementById('handle'+i);
+    h.style.left=p.x+'px'; h.style.top=p.y+'px';
+  });
+}
+let draggingHandle=null,handleOffX=0,handleOffY=0;
+[0,1,2,3].forEach(i => {
+  document.getElementById('handle'+i).addEventListener('mousedown',e=>{
+    const p=map.latLngToContainerPoint(geoCorners[i]);
+    draggingHandle=i; handleOffX=e.clientX-p.x; handleOffY=e.clientY-p.y;
+    e.preventDefault(); e.stopPropagation();
+  });
+});
+
+// ── Move image drag layer ──
+let moveImageMode=false, draggingImage=false, lastMX=0, lastMY=0;
+const dragLayer=document.createElement('div');
+dragLayer.style.cssText='position:fixed;top:0;left:0;width:100%;height:90vh;z-index:600;display:none;cursor:grab;';
+document.body.appendChild(dragLayer);
+dragLayer.addEventListener('mousedown',e=>{ draggingImage=true; lastMX=e.clientX; lastMY=e.clientY; dragLayer.style.cursor='grabbing'; e.preventDefault(); });
+
+document.addEventListener('mousemove',e=>{
+  if (draggingHandle!==null){
+    geoCorners[draggingHandle]=map.containerPointToLatLng(L.point(e.clientX-handleOffX,e.clientY-handleOffY));
+    redraw(); syncHandles(); return;
+  }
+  if (draggingImage){
+    const dx=e.clientX-lastMX, dy=e.clientY-lastMY; lastMX=e.clientX; lastMY=e.clientY;
+    geoCorners=geoCorners.map(ll=>{ const p=map.latLngToContainerPoint(ll); return map.containerPointToLatLng(L.point(p.x+dx,p.y+dy)); });
+    redraw();
+  }
+});
+document.addEventListener('mouseup',()=>{ draggingHandle=null; if(draggingImage){draggingImage=false;dragLayer.style.cursor='grab';} });
+
+// ── Scroll zoom / image scale ──
+let scrollAccum=0;
+document.addEventListener('wheel',e=>{
+  e.preventDefault();
+  if (moveImageMode){
+    const sc=e.deltaY<0?1.05:0.95;
+    const pts=geoCorners.map(ll=>map.latLngToContainerPoint(ll));
+    const cx=pts.reduce((s,p)=>s+p.x,0)/4, cy=pts.reduce((s,p)=>s+p.y,0)/4;
+    geoCorners=geoCorners.map((ll,i)=>map.containerPointToLatLng(L.point(cx+(pts[i].x-cx)*sc,cy+(pts[i].y-cy)*sc)));
+    redraw(); return;
+  }
+  scrollAccum+=e.deltaY;
+  if (Math.abs(scrollAccum)>=100){
+    const zIn=scrollAccum<0; scrollAccum=0;
+    const cp=L.point(e.clientX,e.clientY), ll=map.containerPointToLatLng(cp);
+    map.setZoom(map.getZoom()+(zIn?1:-1),{animate:false});
+    map.panBy(cp.subtract(map.latLngToContainerPoint(ll)).multiplyBy(-1),{animate:false});
+  }
+},{passive:false});
+
+
+// ═══════════════════════════════════════════════
+// MODE BUTTONS
+// ═══════════════════════════════════════════════
+let moveMapMode=false,warpMode=false,nodeMode=false,edgeMode=false;
+
+function setStatus(msg){ const b=document.getElementById('statusBar'); b.textContent=msg||''; b.style.display=msg?'block':'none'; }
+
+function deactivateAll(){
+  moveImageMode=false; dragLayer.style.display='none'; document.getElementById('btnMoveImage').classList.remove('active');
+  moveMapMode=false; map.dragging.disable(); map.doubleClickZoom.disable(); map.touchZoom.disable(); document.getElementById('btnMoveMap').classList.remove('active');
+  warpMode=false; [0,1,2,3].forEach(i=>document.getElementById('handle'+i).style.display='none'); document.getElementById('btnWarpImage').classList.remove('active');
+  nodeMode=false; document.getElementById('btnNodeMode').classList.remove('active');
+  edgeMode=false; document.getElementById('btnEdgeMode').classList.remove('active');
+  // Reset edge selection state on mode change
+  if (selectedNode && selectedNode.marker) selectedNode.marker.setOpacity(1);
+  selectedNode = null;
+  setStatus(null);
+}
+
+function toggleMoveImage(){ const w=moveImageMode; deactivateAll(); if(!w){moveImageMode=true;dragLayer.style.display='block';document.getElementById('btnMoveImage').classList.add('active');} }
+function toggleMoveMap()  { const w=moveMapMode;   deactivateAll(); if(!w){moveMapMode=true;map.dragging.enable();map.doubleClickZoom.enable();map.touchZoom.enable();document.getElementById('btnMoveMap').classList.add('active');} }
+function toggleWarpMode() { const w=warpMode;      deactivateAll(); if(!w){warpMode=true;[0,1,2,3].forEach(i=>document.getElementById('handle'+i).style.display='block');syncHandles();document.getElementById('btnWarpImage').classList.add('active');} }
+function toggleNodeMode() { const w=nodeMode;      deactivateAll(); if(!w){nodeMode=true;document.getElementById('btnNodeMode').classList.add('active');setStatus('Click the map to place a node');} }
+function toggleEdgeMode() { const w=edgeMode;      deactivateAll(); if(!w){edgeMode=true;document.getElementById('btnEdgeMode').classList.add('active');setStatus('Click a node to start an edge');} }
+
+
+// ═══════════════════════════════════════════════
+// NODE / EDGE STATE MACHINE  ← FIXED
+// ═══════════════════════════════════════════════
+let selectedNode = null;   // { feat, marker, latlng }
+const geojsonData = { type:'FeatureCollection', features:[] };
+
+// All placed nodes: [{ feat, marker, latlng }]
+const placedNodes = [];
+
+function haversine(a, b) {
+  const R = 6371000, r = d => d * Math.PI / 180;
+  const dLat = r(b.lat - a.lat), dLng = r(b.lng - a.lng);
+  const h = Math.sin(dLat/2)**2 + Math.cos(r(a.lat)) * Math.cos(r(b.lat)) * Math.sin(dLng/2)**2;
+  return 2 * R * Math.atan2(Math.sqrt(h), Math.sqrt(1 - h));
+}
+
+function edgeExists(f, t) {
+  return geojsonData.features.some(x =>
+    x.properties?.type === 'edge' && x.properties.from === f && x.properties.to === t
+  );
+}
+
+/**
+ * Called when a node marker is clicked while in edge mode.
+ * Uses a two-click state machine:
+ *   1st click → select the "from" node (highlight it)
+ *   2nd click → connect to the "to" node, draw the line, record GeoJSON edge
+ */
+function onNodeMarkerClick(nodeEntry, leafletEvent) {
+  // Stop the click from also firing map.on('click') so nodeMode isn't triggered
+  L.DomEvent.stopPropagation(leafletEvent);
+
+  if (!edgeMode) return;
+
+  if (selectedNode === null) {
+    // ── First click: select this node as the "from" node ──
+    selectedNode = nodeEntry;
+    nodeEntry.marker.setOpacity(0.4);
+    setStatus(`"${nodeEntry.feat.properties.name}" selected — now click another node to connect`);
+
+  } else {
+    // ── Second click: this is the "to" node ──
+    const fromEntry = selectedNode;
+    const toEntry   = nodeEntry;
+
+    // Deselect / reset visual immediately
+    fromEntry.marker.setOpacity(1);
+    selectedNode = null;
+
+    // Prevent self-loop
+    if (fromEntry === toEntry) {
+      setStatus('Cannot connect a node to itself. Click a different node.');
+      return;
+    }
+
+    const fromName = fromEntry.feat.properties.name;
+    const toName   = toEntry.feat.properties.name;
+
+    if (edgeExists(fromName, toName)) {
+      alert(`Edge from "${fromName}" to "${toName}" already exists.`);
+      setStatus('Click a node to start an edge');
+      return;
+    }
+
+    // Ask bidirectional — use a simple confirm to avoid blocking issues
+    const choice = window.prompt(
+  `Create edge between "${fromName}" and "${toName}"?\n\n` +
+  `Type:\n` +
+  `1 = Bidirectional\n` +
+  `2 = One-way (${fromName} → ${toName})\n` +
+  `3 = Cancel`
+);
+
+const bidir = choice === '1' ? true : choice === '2' ? false : null;
+         if(bidir == null){return;}
+    const fromCoords = fromEntry.feat.geometry.coordinates; // [lng, lat]
+    const toCoords   = toEntry.feat.geometry.coordinates;   // [lng, lat]
+    const dist = haversine(
+      { lat: fromCoords[1], lng: fromCoords[0] },
+      { lat: toCoords[1],   lng: toCoords[0]   }
+    );
+
+    // ── Add GeoJSON edge(s) ──
+    geojsonData.features.push({
+      type: 'Feature',
+      properties: { type: 'edge', from: fromName, to: toName, distance_m: dist, bidirectional: bidir },
+      geometry: { type: 'LineString', coordinates: [fromCoords, toCoords] }
+    });
+    if (bidir) {
+      geojsonData.features.push({
+        type: 'Feature',
+        properties: { type: 'edge', from: toName, to: fromName, distance_m: dist, bidirectional: true },
+        geometry: { type: 'LineString', coordinates: [toCoords, fromCoords] }
+      });
+    }
+
+    // ── Draw the connecting line on the map ──
+    const fromLatLng = fromEntry.latlng;
+    const toLatLng   = toEntry.latlng;
+    L.polyline([fromLatLng, toLatLng], {
+      color: '#e74c3c',
+      weight: 3,
+      opacity: 0.9
+    }).addTo(map);
+
+    setStatus(`Edge "${fromName}" → "${toName}" created! Click a node to start another.`);
+  }
+}
+
+// ── Place a new node on map click (nodeMode only) ──
+map.on('click', e => {
+  if (!nodeMode) return;
+
+  const name = prompt('Node name:');
+  if (!name || !name.trim()) return;
+
+  const { lat, lng } = e.latlng;
+
+  const feat = {
+    type: 'Feature',
+    properties: { type: 'node', name: name.trim() },
+    geometry: { type: 'Point', coordinates: [lng, lat] }
+  };
+  geojsonData.features.push(feat);
+
+  const marker = L.marker([lat, lng]).addTo(map);
+  marker.bindPopup(`<b>${name.trim()}</b>`).openPopup();
+
+  const nodeEntry = { feat, marker, latlng: e.latlng };
+  placedNodes.push(nodeEntry);
+
+  // Wire up the marker click for edge mode
+  marker.on('click', leafletEvent => {
+    onNodeMarkerClick(nodeEntry, leafletEvent);
+  });
+
+  setStatus(`Node "${name.trim()}" placed. Click another spot or switch to Connect Nodes mode.`);
+});
+
+// ── Utility zoom functions ──
+function zoomToSGW()   { map.setView([45.497171, -73.579530], 19); }
+function zoomToLoyola(){ map.setView([45.45919,  -73.63815],  19); }
+
+// ── Download GeoJSON ──
+function downloadGeoJSON() {
+  const name = (prompt('File name?', 'map') || 'map').trim().toLowerCase() || 'map';
+  const a = document.createElement('a');
+  a.href = 'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(geojsonData, null, 2));
+  a.download = name + '.geojson';
+  a.style.display = 'none';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => a.remove(), 100);
+}
+
+</script>
+</body>
+</html>

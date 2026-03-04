@@ -1,0 +1,10 @@
+Use "npx serve -l <port number>" or just "npx serve" when you want to map and get the geojson file.
+
+Once that is done. Bring the geojson file inside this folder and run "node dataimprover.js <name of geojson file>". You should see a txt file
+
+If you want to go from you previously created geojson to the poin and edges shown in map, go to the "reverseMapping" function and input the name of the
+geojson file you want to reverse map. Make sure the file is in the same folder as the code and whatever.
+
+
+"npx serve -l <port number>" for the index html
+"node dataConverter.js <geojson file name>"

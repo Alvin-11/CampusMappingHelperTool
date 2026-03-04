@@ -1,0 +1,3679 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_stairs_1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57829332351686,
+          45.496926531247134
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_stairs_2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5776871442795,
+          45.496637865618624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.207"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57848778367043,
+          45.49666889489397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.205"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57836171984673,
+          45.49676292289671
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.259"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57805561274292,
+          45.49686685424754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.257"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57801102101804,
+          45.49684569799968
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.251"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57784003019334,
+          45.49675027762832
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.249"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57756376266481,
+          45.49692537875709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.273"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57791144400836,
+          45.49709340920218
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.204"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57822291553022,
+          45.49672983247852
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.212"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57817396521568,
+          45.49668353286841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.214"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57813239097597,
+          45.49666425711345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.ESCALATORs"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57796542346479,
+          45.49665482836574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.211_1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57835400849582,
+          45.49660550278698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.211_2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57826080173254,
+          45.496683546128196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.261_1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5778058320284,
+          45.49706096422449
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.261_2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57763953506948,
+          45.49698198113081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.285_1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5779681056738,
+          45.49706143226799
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.285_2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57811897993089,
+          45.49691098818578
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.245_1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57755973935127,
+          45.49690021071012
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2.245_2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57772268354894,
+          45.49673096060483
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57846498489381,
+          45.4966434940465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.578317463398,
+          45.49677043187034
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57820615172386,
+          45.4968766833103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5780492424965,
+          45.49683719164807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57794061303139,
+          45.49679769995813
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57775688171388,
+          45.496993277580096
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57789635658266,
+          45.49706285791636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57804521918297,
+          45.49695096028622
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57761204242708,
+          45.49691334922956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5777971148491,
+          45.496714010209914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J11"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57777297496797,
+          45.49665947394009
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J12"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57784003019334,
+          45.49662468353347
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J13"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57801705598833,
+          45.496711189369655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57809618115425,
+          45.49662374325189
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57822760939598,
+          45.49669144348396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J17"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5783013701439,
+          45.49656920689464
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J1",
+        "to": "LB2_J17",
+        "distance_m": 15.194069973127315,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57846498489381,
+            45.4966434940465
+          ],
+          [
+            -73.5783013701439,
+            45.49656920689464
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J17",
+        "to": "LB2_J1",
+        "distance_m": 15.194069973127315,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5783013701439,
+            45.49656920689464
+          ],
+          [
+            -73.57846498489381,
+            45.4966434940465
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J1",
+        "to": "LB2_J2",
+        "distance_m": 18.205381609906173,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57846498489381,
+            45.4966434940465
+          ],
+          [
+            -73.578317463398,
+            45.49677043187034
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J2",
+        "to": "LB2_J1",
+        "distance_m": 18.205381609906173,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.578317463398,
+            45.49677043187034
+          ],
+          [
+            -73.57846498489381,
+            45.4966434940465
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J3",
+        "to": "LB2_J2",
+        "distance_m": 14.657954421607624,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57820615172386,
+            45.4968766833103
+          ],
+          [
+            -73.578317463398,
+            45.49677043187034
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J2",
+        "to": "LB2_J3",
+        "distance_m": 14.657954421607624,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.578317463398,
+            45.49677043187034
+          ],
+          [
+            -73.57820615172386,
+            45.4968766833103
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5781230032444,
+          45.49687291731565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J3",
+        "to": "LB2_J16",
+        "distance_m": 6.4942639852051425,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57820615172386,
+            45.4968766833103
+          ],
+          [
+            -73.5781230032444,
+            45.49687291731565
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J16",
+        "to": "LB2_J3",
+        "distance_m": 6.4942639852051425,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5781230032444,
+            45.49687291731565
+          ],
+          [
+            -73.57820615172386,
+            45.4968766833103
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_stairs_1",
+        "to": "LB2_J3",
+        "distance_m": 8.768464655952231,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57829332351686,
+            45.496926531247134
+          ],
+          [
+            -73.57820615172386,
+            45.4968766833103
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J3",
+        "to": "LB2_stairs_1",
+        "distance_m": 8.768464655952231,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57820615172386,
+            45.4968766833103
+          ],
+          [
+            -73.57829332351686,
+            45.496926531247134
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J16",
+        "to": "LB2_J8",
+        "distance_m": 10.585975862246118,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5781230032444,
+            45.49687291731565
+          ],
+          [
+            -73.57804521918297,
+            45.49695096028622
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J8",
+        "to": "LB2_J16",
+        "distance_m": 10.585975862246118,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57804521918297,
+            45.49695096028622
+          ],
+          [
+            -73.5781230032444,
+            45.49687291731565
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J7",
+        "to": "LB2_J8",
+        "distance_m": 17.01278767867489,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57789635658266,
+            45.49706285791636
+          ],
+          [
+            -73.57804521918297,
+            45.49695096028622
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J8",
+        "to": "LB2_J7",
+        "distance_m": 17.01278767867489,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57804521918297,
+            45.49695096028622
+          ],
+          [
+            -73.57789635658266,
+            45.49706285791636
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J6",
+        "to": "LB2_J7",
+        "distance_m": 13.34306626075993,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57775688171388,
+            45.496993277580096
+          ],
+          [
+            -73.57789635658266,
+            45.49706285791636
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J7",
+        "to": "LB2_J6",
+        "distance_m": 13.34306626075993,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57789635658266,
+            45.49706285791636
+          ],
+          [
+            -73.57775688171388,
+            45.496993277580096
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J9",
+        "to": "LB2_J6",
+        "distance_m": 14.367746047448016,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57761204242708,
+            45.49691334922956
+          ],
+          [
+            -73.57775688171388,
+            45.496993277580096
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J6",
+        "to": "LB2_J9",
+        "distance_m": 14.367746047448016,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57775688171388,
+            45.496993277580096
+          ],
+          [
+            -73.57761204242708,
+            45.49691334922956
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J6",
+        "to": "LB2_J5",
+        "distance_m": 26.038723121123944,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57775688171388,
+            45.496993277580096
+          ],
+          [
+            -73.57794061303139,
+            45.49679769995813
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J5",
+        "to": "LB2_J6",
+        "distance_m": 26.038723121123944,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57794061303139,
+            45.49679769995813
+          ],
+          [
+            -73.57775688171388,
+            45.496993277580096
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J4",
+        "to": "LB2_J5",
+        "distance_m": 9.53781374300965,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5780492424965,
+            45.49683719164807
+          ],
+          [
+            -73.57794061303139,
+            45.49679769995813
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J5",
+        "to": "LB2_J4",
+        "distance_m": 9.53781374300965,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57794061303139,
+            45.49679769995813
+          ],
+          [
+            -73.5780492424965,
+            45.49683719164807
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J4",
+        "to": "LB2_J16",
+        "distance_m": 6.988023627213163,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5780492424965,
+            45.49683719164807
+          ],
+          [
+            -73.5781230032444,
+            45.49687291731565
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J16",
+        "to": "LB2_J4",
+        "distance_m": 6.988023627213163,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5781230032444,
+            45.49687291731565
+          ],
+          [
+            -73.5780492424965,
+            45.49683719164807
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J4",
+        "to": "LB2.257",
+        "distance_m": 3.1256086898303193,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5780492424965,
+            45.49683719164807
+          ],
+          [
+            -73.57801102101804,
+            45.49684569799968
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.257",
+        "to": "LB2_J4",
+        "distance_m": 3.1256086898303193,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57801102101804,
+            45.49684569799968
+          ],
+          [
+            -73.5780492424965,
+            45.49683719164807
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J4",
+        "to": "LB2.259",
+        "distance_m": 3.335491857910807,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5780492424965,
+            45.49683719164807
+          ],
+          [
+            -73.57805561274292,
+            45.49686685424754
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.259",
+        "to": "LB2_J4",
+        "distance_m": 3.335491857910807,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57805561274292,
+            45.49686685424754
+          ],
+          [
+            -73.5780492424965,
+            45.49683719164807
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J9",
+        "to": "LB2_J10",
+        "distance_m": 26.445922549096856,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57761204242708,
+            45.49691334922956
+          ],
+          [
+            -73.5777971148491,
+            45.496714010209914
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J10",
+        "to": "LB2_J9",
+        "distance_m": 26.445922549096856,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5777971148491,
+            45.496714010209914
+          ],
+          [
+            -73.57761204242708,
+            45.49691334922956
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J10",
+        "to": "LB2_J11",
+        "distance_m": 6.34933770354605,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5777971148491,
+            45.496714010209914
+          ],
+          [
+            -73.57777297496797,
+            45.49665947394009
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J11",
+        "to": "LB2_J10",
+        "distance_m": 6.34933770354605,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57777297496797,
+            45.49665947394009
+          ],
+          [
+            -73.5777971148491,
+            45.496714010209914
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J11",
+        "to": "LB2_J12",
+        "distance_m": 6.502385124883785,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57777297496797,
+            45.49665947394009
+          ],
+          [
+            -73.57784003019334,
+            45.49662468353347
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J12",
+        "to": "LB2_J11",
+        "distance_m": 6.502385124883785,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57784003019334,
+            45.49662468353347
+          ],
+          [
+            -73.57777297496797,
+            45.49665947394009
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J12",
+        "to": "LB2.ESCALATORs",
+        "distance_m": 10.332254457951187,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57784003019334,
+            45.49662468353347
+          ],
+          [
+            -73.57796542346479,
+            45.49665482836574
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.ESCALATORs",
+        "to": "LB2_J12",
+        "distance_m": 10.332254457951187,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57796542346479,
+            45.49665482836574
+          ],
+          [
+            -73.57784003019334,
+            45.49662468353347
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.ESCALATORs",
+        "to": "LB2_J13",
+        "distance_m": 7.44791261894759,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57796542346479,
+            45.49665482836574
+          ],
+          [
+            -73.57801705598833,
+            45.496711189369655
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J13",
+        "to": "LB2.ESCALATORs",
+        "distance_m": 7.44791261894759,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57801705598833,
+            45.496711189369655
+          ],
+          [
+            -73.57796542346479,
+            45.49665482836574
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J14",
+        "to": "LB2_J13",
+        "distance_m": 11.514421556258661,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57809618115425,
+            45.49662374325189
+          ],
+          [
+            -73.57801705598833,
+            45.496711189369655
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J13",
+        "to": "LB2_J14",
+        "distance_m": 11.514421556258661,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57801705598833,
+            45.496711189369655
+          ],
+          [
+            -73.57809618115425,
+            45.49662374325189
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J14",
+        "to": "LB2.ESCALATORs",
+        "distance_m": 10.761737056198887,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57809618115425,
+            45.49662374325189
+          ],
+          [
+            -73.57796542346479,
+            45.49665482836574
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.ESCALATORs",
+        "to": "LB2_J14",
+        "distance_m": 10.761737056198887,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57796542346479,
+            45.49665482836574
+          ],
+          [
+            -73.57809618115425,
+            45.49662374325189
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J14",
+        "to": "LB2_J17",
+        "distance_m": 17.103999303222693,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57809618115425,
+            45.49662374325189
+          ],
+          [
+            -73.5783013701439,
+            45.49656920689464
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J17",
+        "to": "LB2_J14",
+        "distance_m": 17.103999303222693,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5783013701439,
+            45.49656920689464
+          ],
+          [
+            -73.57809618115425,
+            45.49662374325189
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J14",
+        "to": "LB2.211_2",
+        "distance_m": 14.451685282988059,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57809618115425,
+            45.49662374325189
+          ],
+          [
+            -73.57826080173254,
+            45.496683546128196
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.211_2",
+        "to": "LB2_J14",
+        "distance_m": 14.451685282988059,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57826080173254,
+            45.496683546128196
+          ],
+          [
+            -73.57809618115425,
+            45.49662374325189
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J15",
+        "to": "LB2_J14",
+        "distance_m": 12.712400653619014,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ],
+          [
+            -73.57809618115425,
+            45.49662374325189
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J14",
+        "to": "LB2_J15",
+        "distance_m": 12.712400653619014,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57809618115425,
+            45.49662374325189
+          ],
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.212",
+        "to": "LB2_J14",
+        "distance_m": 8.997542088054509,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57817396521568,
+            45.49668353286841
+          ],
+          [
+            -73.57809618115425,
+            45.49662374325189
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J14",
+        "to": "LB2.212",
+        "distance_m": 8.997542088054509,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57809618115425,
+            45.49662374325189
+          ],
+          [
+            -73.57817396521568,
+            45.49668353286841
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.214",
+        "to": "LB2_J14",
+        "distance_m": 5.315982775757168,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57813239097597,
+            45.49666425711345
+          ],
+          [
+            -73.57809618115425,
+            45.49662374325189
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J14",
+        "to": "LB2.214",
+        "distance_m": 5.315982775757168,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57809618115425,
+            45.49662374325189
+          ],
+          [
+            -73.57813239097597,
+            45.49666425711345
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J15",
+        "to": "LB2.212",
+        "distance_m": 4.272666824169575,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ],
+          [
+            -73.57817396521568,
+            45.49668353286841
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.212",
+        "to": "LB2_J15",
+        "distance_m": 4.272666824169575,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57817396521568,
+            45.49668353286841
+          ],
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.214",
+        "to": "LB2_J15",
+        "distance_m": 8.013584368784409,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57813239097597,
+            45.49666425711345
+          ],
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J15",
+        "to": "LB2.214",
+        "distance_m": 8.013584368784409,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ],
+          [
+            -73.57813239097597,
+            45.49666425711345
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J15",
+        "to": "LB2.204",
+        "distance_m": 4.284310505499784,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ],
+          [
+            -73.57822291553022,
+            45.49672983247852
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.204",
+        "to": "LB2_J15",
+        "distance_m": 4.284310505499784,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57822291553022,
+            45.49672983247852
+          ],
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J15",
+        "to": "LB2_J2",
+        "distance_m": 11.233463540761912,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ],
+          [
+            -73.578317463398,
+            45.49677043187034
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J2",
+        "to": "LB2_J15",
+        "distance_m": 11.233463540761912,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.578317463398,
+            45.49677043187034
+          ],
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.204",
+        "to": "LB2_J2",
+        "distance_m": 8.642114545972321,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57822291553022,
+            45.49672983247852
+          ],
+          [
+            -73.578317463398,
+            45.49677043187034
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J2",
+        "to": "LB2.204",
+        "distance_m": 8.642114545972321,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.578317463398,
+            45.49677043187034
+          ],
+          [
+            -73.57822291553022,
+            45.49672983247852
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.211_2",
+        "to": "LB2_J2",
+        "distance_m": 10.622795272454937,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57826080173254,
+            45.496683546128196
+          ],
+          [
+            -73.578317463398,
+            45.49677043187034
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J2",
+        "to": "LB2.211_2",
+        "distance_m": 10.622795272454937,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.578317463398,
+            45.49677043187034
+          ],
+          [
+            -73.57826080173254,
+            45.496683546128196
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.211_1",
+        "to": "LB2_J17",
+        "distance_m": 5.755104299531499,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57835400849582,
+            45.49660550278698
+          ],
+          [
+            -73.5783013701439,
+            45.49656920689464
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J17",
+        "to": "LB2.211_1",
+        "distance_m": 5.755104299531499,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5783013701439,
+            45.49656920689464
+          ],
+          [
+            -73.57835400849582,
+            45.49660550278698
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.211_1",
+        "to": "LB2_J1",
+        "distance_m": 9.626213504397585,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57835400849582,
+            45.49660550278698
+          ],
+          [
+            -73.57846498489381,
+            45.4966434940465
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J1",
+        "to": "LB2.211_1",
+        "distance_m": 9.626213504397585,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57846498489381,
+            45.4966434940465
+          ],
+          [
+            -73.57835400849582,
+            45.49660550278698
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J1",
+        "to": "LB2.207",
+        "distance_m": 3.3369405687005114,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57846498489381,
+            45.4966434940465
+          ],
+          [
+            -73.57848778367043,
+            45.49666889489397
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.207",
+        "to": "LB2_J1",
+        "distance_m": 3.3369405687005114,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57848778367043,
+            45.49666889489397
+          ],
+          [
+            -73.57846498489381,
+            45.4966434940465
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.205",
+        "to": "LB2_J2",
+        "distance_m": 3.5490529006512936,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57836171984673,
+            45.49676292289671
+          ],
+          [
+            -73.578317463398,
+            45.49677043187034
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J2",
+        "to": "LB2.205",
+        "distance_m": 3.5490529006512936,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.578317463398,
+            45.49677043187034
+          ],
+          [
+            -73.57836171984673,
+            45.49676292289671
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.205",
+        "to": "LB2_J1",
+        "distance_m": 15.52857967293516,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57836171984673,
+            45.49676292289671
+          ],
+          [
+            -73.57846498489381,
+            45.4966434940465
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J1",
+        "to": "LB2.205",
+        "distance_m": 15.52857967293516,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57846498489381,
+            45.4966434940465
+          ],
+          [
+            -73.57836171984673,
+            45.49676292289671
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J11",
+        "to": "LB2_stairs_2",
+        "distance_m": 7.1082341242072795,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57777297496797,
+            45.49665947394009
+          ],
+          [
+            -73.5776871442795,
+            45.496637865618624
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_stairs_2",
+        "to": "LB2_J11",
+        "distance_m": 7.1082341242072795,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5776871442795,
+            45.496637865618624
+          ],
+          [
+            -73.57777297496797,
+            45.49665947394009
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J10",
+        "to": "LB2.245_2",
+        "distance_m": 6.09982839559676,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5777971148491,
+            45.496714010209914
+          ],
+          [
+            -73.57772268354894,
+            45.49673096060483
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.245_2",
+        "to": "LB2_J10",
+        "distance_m": 6.09982839559676,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57772268354894,
+            45.49673096060483
+          ],
+          [
+            -73.5777971148491,
+            45.496714010209914
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J10",
+        "to": "LB2.251",
+        "distance_m": 5.239420423604772,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5777971148491,
+            45.496714010209914
+          ],
+          [
+            -73.57784003019334,
+            45.49675027762832
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.251",
+        "to": "LB2_J10",
+        "distance_m": 5.239420423604772,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57784003019334,
+            45.49675027762832
+          ],
+          [
+            -73.5777971148491,
+            45.496714010209914
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J9",
+        "to": "LB2.249",
+        "distance_m": 3.993682080712703,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57761204242708,
+            45.49691334922956
+          ],
+          [
+            -73.57756376266481,
+            45.49692537875709
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.249",
+        "to": "LB2_J9",
+        "distance_m": 3.993682080712703,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57756376266481,
+            45.49692537875709
+          ],
+          [
+            -73.57761204242708,
+            45.49691334922956
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J9",
+        "to": "LB2.245_1",
+        "distance_m": 4.33047171122373,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57761204242708,
+            45.49691334922956
+          ],
+          [
+            -73.57755973935127,
+            45.49690021071012
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.245_1",
+        "to": "LB2_J9",
+        "distance_m": 4.33047171122373,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57755973935127,
+            45.49690021071012
+          ],
+          [
+            -73.57761204242708,
+            45.49691334922956
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.245_1",
+        "to": "LB2_J10",
+        "distance_m": 27.766607306362072,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57755973935127,
+            45.49690021071012
+          ],
+          [
+            -73.5777971148491,
+            45.496714010209914
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J10",
+        "to": "LB2.245_1",
+        "distance_m": 27.766607306362072,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5777971148491,
+            45.496714010209914
+          ],
+          [
+            -73.57755973935127,
+            45.49690021071012
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.261_2",
+        "to": "LB2_J9",
+        "distance_m": 7.926650405509693,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57763953506948,
+            45.49698198113081
+          ],
+          [
+            -73.57761204242708,
+            45.49691334922956
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J9",
+        "to": "LB2.261_2",
+        "distance_m": 7.926650405509693,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57761204242708,
+            45.49691334922956
+          ],
+          [
+            -73.57763953506948,
+            45.49698198113081
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J6",
+        "to": "LB2.261_2",
+        "distance_m": 9.232051610973592,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57775688171388,
+            45.496993277580096
+          ],
+          [
+            -73.57763953506948,
+            45.49698198113081
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.261_2",
+        "to": "LB2_J6",
+        "distance_m": 9.232051610973592,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57763953506948,
+            45.49698198113081
+          ],
+          [
+            -73.57775688171388,
+            45.496993277580096
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J5",
+        "to": "LB2.251",
+        "distance_m": 9.44804805122921,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57794061303139,
+            45.49679769995813
+          ],
+          [
+            -73.57784003019334,
+            45.49675027762832
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.251",
+        "to": "LB2_J5",
+        "distance_m": 9.44804805122921,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57784003019334,
+            45.49675027762832
+          ],
+          [
+            -73.57794061303139,
+            45.49679769995813
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.261_1",
+        "to": "LB2_J6",
+        "distance_m": 8.438195819182177,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5778058320284,
+            45.49706096422449
+          ],
+          [
+            -73.57775688171388,
+            45.496993277580096
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J6",
+        "to": "LB2.261_1",
+        "distance_m": 8.438195819182177,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57775688171388,
+            45.496993277580096
+          ],
+          [
+            -73.5778058320284,
+            45.49706096422449
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J7",
+        "to": "LB2.261_1",
+        "distance_m": 7.0587719265885065,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57789635658266,
+            45.49706285791636
+          ],
+          [
+            -73.5778058320284,
+            45.49706096422449
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.261_1",
+        "to": "LB2_J7",
+        "distance_m": 7.0587719265885065,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5778058320284,
+            45.49706096422449
+          ],
+          [
+            -73.57789635658266,
+            45.49706285791636
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J7",
+        "to": "LB2.273",
+        "distance_m": 3.594919303688045,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57789635658266,
+            45.49706285791636
+          ],
+          [
+            -73.57791144400836,
+            45.49709340920218
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.273",
+        "to": "LB2_J7",
+        "distance_m": 3.594919303688045,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57791144400836,
+            45.49709340920218
+          ],
+          [
+            -73.57789635658266,
+            45.49706285791636
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J7",
+        "to": "LB2.285_1",
+        "distance_m": 5.594486875951468,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57789635658266,
+            45.49706285791636
+          ],
+          [
+            -73.5779681056738,
+            45.49706143226799
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.285_1",
+        "to": "LB2_J7",
+        "distance_m": 5.594486875951468,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5779681056738,
+            45.49706143226799
+          ],
+          [
+            -73.57789635658266,
+            45.49706285791636
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J8",
+        "to": "LB2.285_2",
+        "distance_m": 7.266831314070743,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57804521918297,
+            45.49695096028622
+          ],
+          [
+            -73.57811897993089,
+            45.49691098818578
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.285_2",
+        "to": "LB2_J8",
+        "distance_m": 7.266831314070743,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57811897993089,
+            45.49691098818578
+          ],
+          [
+            -73.57804521918297,
+            45.49695096028622
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J16",
+        "to": "LB2.285_2",
+        "distance_m": 4.244886247809639,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5781230032444,
+            45.49687291731565
+          ],
+          [
+            -73.57811897993089,
+            45.49691098818578
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.285_2",
+        "to": "LB2_J16",
+        "distance_m": 4.244886247809639,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57811897993089,
+            45.49691098818578
+          ],
+          [
+            -73.5781230032444,
+            45.49687291731565
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J8",
+        "to": "LB2.285_1",
+        "distance_m": 13.675495902965933,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57804521918297,
+            45.49695096028622
+          ],
+          [
+            -73.5779681056738,
+            45.49706143226799
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.285_1",
+        "to": "LB2_J8",
+        "distance_m": 13.675495902965933,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5779681056738,
+            45.49706143226799
+          ],
+          [
+            -73.57804521918297,
+            45.49695096028622
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "node",
+        "name": "LB2_J20"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57827253639698,
+          45.49680570965695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J13",
+        "to": "LB2_J20",
+        "distance_m": 22.516172328134687,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57801705598833,
+            45.496711189369655
+          ],
+          [
+            -73.57827253639698,
+            45.49680570965695
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J20",
+        "to": "LB2_J13",
+        "distance_m": 22.516172328134687,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57827253639698,
+            45.49680570965695
+          ],
+          [
+            -73.57801705598833,
+            45.496711189369655
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J2",
+        "to": "LB2_J20",
+        "distance_m": 5.258285450318955,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.578317463398,
+            45.49677043187034
+          ],
+          [
+            -73.57827253639698,
+            45.49680570965695
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J20",
+        "to": "LB2_J2",
+        "distance_m": 5.258285450318955,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57827253639698,
+            45.49680570965695
+          ],
+          [
+            -73.578317463398,
+            45.49677043187034
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J20",
+        "to": "LB2_J3",
+        "distance_m": 9.436846264874765,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57827253639698,
+            45.49680570965695
+          ],
+          [
+            -73.57820615172386,
+            45.4968766833103
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J3",
+        "to": "LB2_J20",
+        "distance_m": 9.436846264874765,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57820615172386,
+            45.4968766833103
+          ],
+          [
+            -73.57827253639698,
+            45.49680570965695
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J12",
+        "to": "LB2_J10",
+        "distance_m": 10.480765846356734,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57784003019334,
+            45.49662468353347
+          ],
+          [
+            -73.5777971148491,
+            45.496714010209914
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J10",
+        "to": "LB2_J12",
+        "distance_m": 10.480765846356734,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5777971148491,
+            45.496714010209914
+          ],
+          [
+            -73.57784003019334,
+            45.49662468353347
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J12",
+        "to": "LB2.245_2",
+        "distance_m": 14.943443879232602,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57784003019334,
+            45.49662468353347
+          ],
+          [
+            -73.57772268354894,
+            45.49673096060483
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.245_2",
+        "to": "LB2_J12",
+        "distance_m": 14.943443879232602,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57772268354894,
+            45.49673096060483
+          ],
+          [
+            -73.57784003019334,
+            45.49662468353347
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J17",
+        "to": "LB2.212",
+        "distance_m": 16.13121778138766,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5783013701439,
+            45.49656920689464
+          ],
+          [
+            -73.57817396521568,
+            45.49668353286841
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.212",
+        "to": "LB2_J17",
+        "distance_m": 16.13121778138766,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57817396521568,
+            45.49668353286841
+          ],
+          [
+            -73.5783013701439,
+            45.49656920689464
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J17",
+        "to": "LB2.214",
+        "distance_m": 16.887006930895534,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5783013701439,
+            45.49656920689464
+          ],
+          [
+            -73.57813239097597,
+            45.49666425711345
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.214",
+        "to": "LB2_J17",
+        "distance_m": 16.887006930895534,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57813239097597,
+            45.49666425711345
+          ],
+          [
+            -73.5783013701439,
+            45.49656920689464
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.211_2",
+        "to": "LB2_J15",
+        "distance_m": 2.732056376115368,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57826080173254,
+            45.496683546128196
+          ],
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J15",
+        "to": "LB2.211_2",
+        "distance_m": 2.732056376115368,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ],
+          [
+            -73.57826080173254,
+            45.496683546128196
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J15",
+        "to": "LB2_J17",
+        "distance_m": 14.757938564303918,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ],
+          [
+            -73.5783013701439,
+            45.49656920689464
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J17",
+        "to": "LB2_J15",
+        "distance_m": 14.757938564303918,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5783013701439,
+            45.49656920689464
+          ],
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.205",
+        "to": "LB2.211_2",
+        "distance_m": 11.822596269244187,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57836171984673,
+            45.49676292289671
+          ],
+          [
+            -73.57826080173254,
+            45.496683546128196
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.211_2",
+        "to": "LB2.205",
+        "distance_m": 11.822596269244187,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57826080173254,
+            45.496683546128196
+          ],
+          [
+            -73.57836171984673,
+            45.49676292289671
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.205",
+        "to": "LB2_J15",
+        "distance_m": 13.131454234187466,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57836171984673,
+            45.49676292289671
+          ],
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J15",
+        "to": "LB2.205",
+        "distance_m": 13.131454234187466,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57822760939598,
+            45.49669144348396
+          ],
+          [
+            -73.57836171984673,
+            45.49676292289671
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.205",
+        "to": "LB2.204",
+        "distance_m": 11.427281524675328,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57836171984673,
+            45.49676292289671
+          ],
+          [
+            -73.57822291553022,
+            45.49672983247852
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2.204",
+        "to": "LB2.205",
+        "distance_m": 11.427281524675328,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57822291553022,
+            45.49672983247852
+          ],
+          [
+            -73.57836171984673,
+            45.49676292289671
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J13",
+        "to": "LB2_J12",
+        "distance_m": 16.81974797628776,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57801705598833,
+            45.496711189369655
+          ],
+          [
+            -73.57784003019334,
+            45.49662468353347
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J12",
+        "to": "LB2_J13",
+        "distance_m": 16.81974797628776,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57784003019334,
+            45.49662468353347
+          ],
+          [
+            -73.57801705598833,
+            45.496711189369655
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J12",
+        "to": "LB2_stairs_2",
+        "distance_m": 12.006079101961026,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57784003019334,
+            45.49662468353347
+          ],
+          [
+            -73.5776871442795,
+            45.496637865618624
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_stairs_2",
+        "to": "LB2_J12",
+        "distance_m": 12.006079101961026,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5776871442795,
+            45.496637865618624
+          ],
+          [
+            -73.57784003019334,
+            45.49662468353347
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_J20",
+        "to": "LB2_stairs_1",
+        "distance_m": 13.532089912240197,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57827253639698,
+            45.49680570965695
+          ],
+          [
+            -73.57829332351686,
+            45.496926531247134
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "edge",
+        "from": "LB2_stairs_1",
+        "to": "LB2_J20",
+        "distance_m": 13.532089912240197,
+        "bidirectional": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57829332351686,
+            45.496926531247134
+          ],
+          [
+            -73.57827253639698,
+            45.49680570965695
+          ]
+        ]
+      }
+    }
+  ]
+}
