@@ -7,3 +7,4 @@ You would need "npx", "serve" and "node".
 
 <img width="2524" height="1419" alt="Screenshot 2026-03-04 231142" src="https://github.com/user-attachments/assets/a9066b3f-2b47-42ea-bfe2-a3c25784159f" />
 
+<img width="2529" height="1422" alt="image" src="https://github.com/user-attachments/assets/7394f84b-1b60-424d-9653-ccf44ae6e66a" />
