@@ -1,3 +1,6 @@
+This tool was made using Leaflet combined with HTML/CSS/Javascript along with scripts made using javascripts (scripts) file to process the geojson and other data formatting issue.
+Internet connection is required to access the leaflet functionality.
+To read more about Leaflet : https://leafletjs.com/ 
 You would need "npx", "serve" and "node".
 - To run the main helper tool "npx serve -l <port number>".
 - To run the other javascript scripts which serves to process data "node 'javascript file name' 'file to process'".
